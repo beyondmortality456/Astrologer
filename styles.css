@@ -1,0 +1,36 @@
+body {
+  text-align: center; /* Centers the text and button */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.images-container {
+  position: relative; /* Allows absolute positioning within this container */
+  display: inline-flex; /* Keeps images inline and centered */
+  flex-direction: column;
+  align-items: center;
+}
+
+.smiling-astrologer {
+  position: absolute; /* Allows precise positioning */
+  z-index: 2; /* Ensures it appears above the crystal ball */
+  height: 80%;
+}
+
+.crystal-ball {
+  z-index: 1; /* Ensures it appears below the astrologer */
+  margin-top: 50px; /* Adds space above the crystal ball, making room for the astrologer */
+  width: 45%;
+  height: 45%;
+}
+
+h1,
+p,
+.answer-text,
+button {
+  width: 90%; /* Ensures content doesn't stretch too wide */
+  max-width: 600px; /* Maximum width of content for large screens */
+}
