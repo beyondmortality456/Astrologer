@@ -22,6 +22,14 @@
     </div>
     <p>Bring up a question up in your mind...</p>
     <div class="answer-text"></div>
-    <button>Show me the answer</button>
+    <button id="tiltButton">Show me the answer</button>
+
+    <script>
+      document.getElementById('tiltButton').addEventListener('click', function() {
+        var astrologer = document.querySelector('.smiling-astrologer');
+        astrologer.classList.toggle('tilting'); // Toggles the tilting animation on and off
+      });
+    </script>
+    
   </body>
 </html>
