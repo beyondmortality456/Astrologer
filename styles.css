@@ -1,11 +1,16 @@
 body {
-  text-align: center; /* Centers the text and button */
-  margin: 0;
-  padding: 0;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: radial-gradient(circle, #fcf7f2, #fdf4b8, #9946ff);
+  background: radial-gradient(circle, #fcf7f2, #fdf4b8, #f0e4ff);
+}
+
+h1 {
+  margin-top: 40px;
+  font-family: cursive;
+  letter-spacing: 2px;
+  color: rgb(5, 0, 64);
 }
 
 .images-container {
@@ -19,20 +24,36 @@ body {
   position: absolute; /* Allows precise positioning */
   z-index: 2; /* Ensures it appears above the crystal ball */
   height: 80%;
+  opacity: 95%;
 }
 
 .crystal-ball {
   z-index: 1;
   width: 45%;
   height: 45%;
+  opacity: 70%;
 }
 
-h1 {
-  margin-top: 80px;
+p {
+  font-size: 25px;
+  font-family: cursive;
+  letter-spacing: 3px;
+  color: rgb(5, 0, 64);
 }
+
+.answer-button {
+  padding: 15px 50px;
+  border-radius: 25px;
+}
+.answer-button:hover {
+ background-color: rgb(255, 213, 0);
+}
+
+
 
 @keyframes tilt {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
   25% {
@@ -44,10 +65,9 @@ h1 {
 }
 
 .smiling-astrologer {
-  /* Other styles for your image */
-  transition: transform 0.2s; /* Smooth transition */
+  transition: transform 0.1s; /* Smooth transition */
 }
 
 .tilting {
-  animation: tilt 2s infinite; /* Adjust time as needed */
+  animation: tilt 1s 3; /* Adjust time as needed */
 }

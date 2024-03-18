@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Are you curious to know the answer to your questions?</h1>
+    <h1>Curious to know the answer to your questions?</h1>
     <div class="images-container">
       <img
         class="smiling-astrologer"
@@ -22,14 +22,15 @@
     </div>
     <p>Bring up a question up in your mind...</p>
     <div class="answer-text"></div>
-    <button id="tiltButton">Show me the answer</button>
+    <button class="answer-button js-answer-button">Reveal the truth</button>
 
     <script>
-      document.getElementById('tiltButton').addEventListener('click', function() {
-        var astrologer = document.querySelector('.smiling-astrologer');
-        astrologer.classList.toggle('tilting'); // Toggles the tilting animation on and off
-      });
+      document
+        .querySelector(".js-answer-button")
+        .addEventListener("click", function () {
+          const astrologer = document.querySelector(".smiling-astrologer");
+          astrologer.classList.toggle("tilting"); // Toggles the tilting animation on and off
+        });
     </script>
-    
   </body>
 </html>
