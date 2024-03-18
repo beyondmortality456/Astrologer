@@ -3,7 +3,31 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: radial-gradient(circle, #fcf7f2, #fdf4b8, #f0e4ff);
+}
+
+.video-container {
+  position: absolute;
+  bottom: 23%;
+  right: 50%;
+  width: 100vw; /* Adjust to the width you need */
+  height: 100vh; /* Adjust to the height you need */
+  overflow: hidden; /* Hide everything outside the clip-path */
+  display: flex;
+  justify-content: center; /* Center the video horizontally */
+  align-items: center; /* Center the video vertically */
+  z-index: -100;
+  transform: translate(50%, 10%);
+}
+
+#background-video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  clip-path: circle(10% at 50% 50%); /* Creates a circular mask */
+  filter: brightness(150%);
+  filter: contrast(150%);
 }
 
 h1 {
@@ -22,20 +46,21 @@ h1 {
 
 .smiling-astrologer {
   position: absolute; /* Allows precise positioning */
+  top: 2%;
   z-index: 2; /* Ensures it appears above the crystal ball */
   height: 80%;
-  opacity: 95%;
+  opacity: 75%;
 }
 
 .crystal-ball {
   z-index: 1;
-  width: 45%;
-  height: 45%;
-  opacity: 70%;
+  width: 47%;
+  height: 47%;
+  opacity: 50%;
 }
 
-.answer-text{
-margin: 20px;
+.answer-text {
+  margin: 20px;
 }
 
 .call-to-action-text {
@@ -50,10 +75,8 @@ margin: 20px;
   border-radius: 25px;
 }
 .answer-button:hover {
- background-color: rgb(255, 213, 0);
+  background-color: rgb(255, 213, 0);
 }
-
-
 
 @keyframes tilt {
   0%,
@@ -61,10 +84,10 @@ margin: 20px;
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(-20deg); /* Tilts to the left */
+    transform: rotate(-5deg); /* Tilts to the left */
   }
   75% {
-    transform: rotate(20deg); /* Tilts to the right */
+    transform: rotate(5deg); /* Tilts to the right */
   }
 }
 
