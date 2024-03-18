@@ -34,7 +34,11 @@ h1 {
   opacity: 70%;
 }
 
-p {
+.answer-text{
+margin: 20px;
+}
+
+.call-to-action-text {
   font-size: 25px;
   font-family: cursive;
   letter-spacing: 3px;
