@@ -8,7 +8,7 @@
   </head>
   <body>
   <div class="video-container">  
-    <video autoplay loop muted id="background-video">
+    <video autoplay loop muted id="crystal-background-video">
       <source src="videos/orbs.mp4" type="video/mp4" />
     </video>
 </div>
@@ -31,132 +31,6 @@
     </div>
     <div class="answer-text"></div>
     <button class="answer-button js-answer-button">Reveal the truth</button>
-
-    <script>
-      const astrologerAnswers = [
-        "The stars suggest it's possible, but don't ignore the signs around you.",
-        "In the grand scheme of the universe, does it truly matter?",
-        "The moon's phase is favorable for such endeavors.",
-        "Mars is in retrograde; proceed with caution.",
-        "Jupiter's alignment suggests a bountiful outcome.",
-        "Seek balance, and the answer will present itself.",
-        "The constellations are unclear on this matter. Reflect within.",
-        "An old soul knows to wait for the right moment.",
-        "The tides of change are upon you. Embrace them.",
-        "As the cosmos shift, so too shall your path.",
-        "Look to the stars, but trust your inner galaxy.",
-        "Cosmic energy doesn't lie, but it does test your faith.",
-        "The universe whispers, but you must listen closely.",
-        "In the dance of the planets, timing is everything.",
-        "Your spirit guide holds the answer, seek their wisdom.",
-        "The astral plane is tumultuous. Best to wait.",
-        "A cosmic wind brings change. Ready yourself.",
-        "The stars nod in agreement, but do you?",
-        "Saturn's rings tell a story of patience.",
-        "The answer is written in the celestial bodies, yet it shifts like sand.",
-        "Beware the illusions of Neptune's gaze.",
-        "Your question echoes in the cosmic silence.",
-        "Pluto's journey suggests transformation is key.",
-        "The zodiac whispers secrets, not always answers.",
-        "Celestial harmony or chaos? Only time will reveal.",
-        "The answer is as fleeting as a comet's tail.",
-        "Let the lunar light guide your decision.",
-        "A nebulous question, indeed. The universe ponders.",
-        "The stars suggest a journey, not a destination.",
-        "In cosmic vastness, your answer awaits discovery.",
-        "Mercury's message is cryptic. Reflect deeper.",
-        "Venus's influence emphasizes love's role in your query.",
-        "The solar flares disrupt clarity. Be patient.",
-        "An eclipse obscures the answer. Await its passing.",
-        "Galactic forces align in mysterious ways.",
-        "The celestial equator offers balance, seek it.",
-        "Your fate is intertwined with the cosmic dance.",
-        "The Big Dipper points, but to what?",
-        "Orion's Belt tightens, suggesting caution.",
-        "The Milky Way swirls with possibilities.",
-        "Astrological aspects are complex, like your question.",
-        "A shooting star heralds sudden insight.",
-        "The universe hums a cryptic tune.",
-        "Black holes offer no answers, only questions.",
-        "The cosmic ballet goes on, with or without answers.",
-        "Stellar nurseries birth stars, and perhaps, your answer.",
-        "The void between stars holds untold mysteries.",
-        "Supernovas explode with potential. So does your question.",
-        "The cosmic tapestry weaves its own answers.",
-        "In the silence of space, find your peace.",
-        "The ancients looked up for answers. So should you.",
-        "Gravity binds the stars, but frees your fate.",
-        "The universe's age is a reminder: patience.",
-        "Like constellations, connect the dots of your life.",
-        "The cosmos is indifferent, but you are not.",
-        "Infinite worlds, infinite possibilities. Choose wisely.",
-        "The astral alignment favors bold actions.",
-        "Your question sends ripples through the ether.",
-        "A quantum quandary! The universe giggles.",
-        "Stardust composes your question, and the answer.",
-        "Like the Phoenix, from cosmic ash, arise.",
-        "The galactic core shines; so does your path.",
-        "Cosmic collisions shape galaxies, and destinies.",
-        "The Pillars of Creation hold your answer aloft.",
-        "In the vast expanse, your answer drifts.",
-        "Wormholes twist reality and perhaps, your question.",
-        "The event horizon obscures, then reveals.",
-        "Celestial symphonies play the notes of fate.",
-        "The cosmic web entangles your query.",
-        "Starlight illuminates, but shadows hold depth.",
-        "The universe expands, and so do possibilities.",
-        "In astral whispers, find your solace.",
-        "The cosmic clock ticks, but is timeless.",
-        "Auroras paint the sky with unseen answers.",
-        "Meteor showers cleanse doubts, revealing paths.",
-        "Lunar phases reflect the cyclical nature of answers.",
-        "Solar stormdisrupt, yet also renew.",
-        "Through the telescope of your soul, peer deeply.",
-        "Astrological transitions signify times of change.",
-        "Like the rings of Saturn, some answers encircle us.",
-        "The Pleiades sing a song of seven answers.",
-        "In the vacuum of space, your heart still hears.",
-        "The Andromeda and Milky Way's dance hints at unity.",
-        "Cosmic dust clouds may obscure, but also create.",
-        "The Southern Cross guides more than sailors.",
-        "From the dark side of the moon, perspective shifts.",
-        "The Great Attractor pulls us to unknown fates.",
-        "Interstellar winds carry your questions to the stars.",
-        "Uranus's tilt offers a different viewpoint.",
-        "Galaxies far beyond ours hold ancient wisdom.",
-        "Through the Hubble's eye, vastness becomes clear.",
-        "Pulsars pulse with the rhythm of the universe.",
-        "Quasars illuminate the most distant queries.",
-        "The celestial north pole stands firm amidst chaos.",
-        "Ecliptic paths chart the course of destiny.",
-        "Light-years measure space, moments measure life.",
-        "In the cosmic ledger, every question counts.",
-        "Gravity's embrace holds us, even in doubt.",
-        "The universe's echo chamber amplifies your query.",
-        "Neutron stars spin tales of extreme conditions.",
-        "Like the Aurora, answers shimmer differently upon each viewing.",
-        "Dark matter binds the unseen, like hidden truths.",
-        "The Oort Cloud's mysteries mirror our own.",
-        "In the Kuiper Belt, find the edge of answers.",
-        "Voyager's golden record carries humanity's questions afar.",
-        "The cosmic microwave background hums the original answer.",
-      ];
-
-      function generateAnswer() {
-        let randomNumber = Math.floor(Math.random() * 100) + 1;
-        const answer = astrologerAnswers[randomNumber];
-
-        document.querySelector(".answer-text").innerHTML = answer;
-      }
-
-      document
-        .querySelector(".js-answer-button")
-        .addEventListener("click", () => {
-          const astrologer = document.querySelector(".smiling-astrologer");
-          astrologer.classList.toggle("tilting"); // Toggles the tilting animation on and off
-
-          generateAnswer();
-        });
-    </script>
+    <script type="module" src="scripts.js"></script>
   </body>
 </html>
