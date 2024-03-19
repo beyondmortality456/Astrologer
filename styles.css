@@ -1,4 +1,6 @@
 body {
+  width: 100vw;
+  height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -7,25 +9,19 @@ body {
 
 .video-container {
   position: absolute;
-  bottom: 23%;
-  right: 50%;
-  width: 100vw; /* Adjust to the width you need */
-  height: 100vh; /* Adjust to the height you need */
-  overflow: hidden; /* Hide everything outside the clip-path */
+  bottom: 60px;
+  right: 260px;
+  width: 500px;
+  height: 500px;
   display: flex;
-  justify-content: center; /* Center the video horizontally */
-  align-items: center; /* Center the video vertically */
+  justify-content: center;
+  align-items: center;
   z-index: -100;
-  transform: translate(50%, 10%);
 }
 
 #crystal-background-video {
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  clip-path: circle(10% at 50% 50%); /* Creates a circular mask */
+  clip-path: circle(10.7% at 50% 50%); /* Creates a circular mask */
   filter: brightness(150%);
   filter: contrast(150%);
 }
@@ -38,16 +34,16 @@ h1 {
 }
 
 .images-container {
-  position: relative; /* Allows absolute positioning within this container */
-  display: inline-flex; /* Keeps images inline and centered */
+  position: relative;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
 }
 
 .smiling-astrologer {
-  position: absolute; /* Allows precise positioning */
+  position: absolute;
   top: 2%;
-  z-index: 2; /* Ensures it appears above the crystal ball */
+  z-index: 2;
   height: 80%;
   opacity: 75%;
 }
@@ -78,6 +74,40 @@ h1 {
   background-color: rgb(255, 213, 0);
 }
 
+.answer-container {
+  position: absolute;
+  bottom: 230px;
+  right: 535px;
+  width: 350px;
+  height: 350px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: solid 4px rgba(128, 128, 128, 0.554);
+  border-radius: 50%;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.answer {
+  position: absolute;
+  padding: 16px 96px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  text-shadow: 2px 2px 4px #000000;
+  animation: fadeIn 5s ease-out forwards;
+}
+
+.tilting {
+  animation: tilt 1s 3; /* Adjust time as needed */
+}
+
+.fadeout {
+  animation: fadeOut 0.2s ease-out;
+}
+
 @keyframes tilt {
   0%,
   100% {
@@ -91,10 +121,20 @@ h1 {
   }
 }
 
-.smiling-astrologer {
-  transition: transform 0.1s; /* Smooth transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.tilting {
-  animation: tilt 1s 3; /* Adjust time as needed */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
